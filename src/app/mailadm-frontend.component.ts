@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import {MailadmNavComponent} from './nav/mailadm-nav.component';
+
 @Component({
   moduleId: module.id,
   selector: 'mailadm-frontend-app',
