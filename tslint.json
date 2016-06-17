@@ -67,6 +67,7 @@
     "output-parameter-decorator": true,
     "attribute-parameter-decorator": true,
     "input-property-directive": true,
-    "output-property-directive": true
+    "output-property-directive": true,
+    "experimentalDecorators": true
   }
 }

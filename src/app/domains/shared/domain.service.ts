@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
-import { Headers, RequestOptions } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 
 import { Domain } from './domain';
@@ -14,13 +13,8 @@ export class DomainService {
 
     get(): Observable<Domain[]> {
         return this.http.get(URL)
-            .map(this.extractData)
+            .map((response : Response) => response.json() || {})
             .catch(this.handleError);
-    }
-
-    private extractData(response: Response) {
-        let body = response.json();
-        return body.data || {};
     }
 
     private handleError(error: any) {

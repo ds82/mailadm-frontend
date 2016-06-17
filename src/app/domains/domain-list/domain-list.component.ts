@@ -1,14 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-import { Domain } from './domain';
-import { DomainService } from './domain.service';
+import { Domain } from '../shared/domain';
+import { DomainService } from '../shared/domain.service';
+
+import {DomainTableComponent} from './domain-table.component';
 
 @Component({
     moduleId: module.id,
-    selector: 'mailadm-domain-list',
-    templateUrl: 'list.component.html',
-    providers: [DomainService]
+    selector: 'domain-list',
+    templateUrl: 'domain-list.component.html',
+    providers: [DomainService],
+    directives: [DomainTableComponent]
 })
-export class MailadmDomainListComponent implements OnInit {
+export class DomainListComponent implements OnInit {
     domains: Domain[];
 
     constructor(private $domains: DomainService) { }

@@ -1,7 +1,7 @@
 import {Routes} from '@ngrx/router';
 
 import {MailadmDashboardComponent} from './dashboard/dashboard.component'
-import {MailadmDomainListComponent} from './domains/list.component';
+import {DomainListComponent} from './domains/domain-list/domain-list.component';
 
 export const routes: Routes = [
   {
@@ -10,7 +10,7 @@ export const routes: Routes = [
   },
   {
       path: '/domains',
-      component: MailadmDomainListComponent
+      component: DomainListComponent
   }
 //   {
 //     path: '/blog',
