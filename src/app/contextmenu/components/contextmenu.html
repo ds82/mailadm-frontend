@@ -1,7 +1,4 @@
-<ul class="dropdown-menu" role="menu" [ngClass]="{hidden: isHidden}" [ngStyle]="{'top': top+'px', 'left': left+'px'}">
-    <li><a href="#">{{$item | json}}</a></li>
-    <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
-    <li class="divider"></li>
-    <li><a href="#">Separated link</a></li>
+<ul class="dropdown-menu dropdown-menu-inverse" role="menu" [ngClass]="{hidden: isHidden}" [ngStyle]="{'top': top+'px', 'left': left+'px'}">
+    <li class="dropdown-header">{{$item.domain}}</li>
+    <li><a href="#">Edit</a></li>
 </ul>
